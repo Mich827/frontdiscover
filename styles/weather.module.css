@@ -1,0 +1,77 @@
+.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 20px;
+  border-radius: 20px;
+  /*box-shadow: 3px 3px 5px black;*/
+  
+  width: 100%;
+  
+  
+}
+.result:hover{
+  box-shadow: 3px 3px 5px black;
+  /*background-color: rgb(225, 219, 211);*/
+}
+.textMeteo{
+  color: rgb(222, 148, 58);
+}
+.containerProfil{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/nature.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  margin: 10px;
+ 
+}
+.meteo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+
+}
+.icon{
+  height: 250px;
+}
+
+
+/**/
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 250px;
+  
+	margin: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px black;
+  
+  
+}
+.image {
+	width: 250px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+
+.coldTemperature{
+  color:rgb(12, 92, 177);
+  
+}
+.hotTemperature{
+color:rgb(176, 18, 4)
+}
+.normalTemperature{
+color: rgb(123, 116, 6)
+}

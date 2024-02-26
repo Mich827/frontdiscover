@@ -1,0 +1,71 @@
+
+.card:hover{
+  box-shadow: 4px 4px 6px #085646;
+  background-color: rgb(222, 219, 215);
+  /*animation: scale 2s alternate forwards;*/
+}
+/*animation*/
+@keyframes scale {
+  100%{
+    transform: scale(1.1,1.1);
+  }
+  
+}
+.containerMedia{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  margin: 40px;
+  padding: 20px;
+  position: relative;
+ 
+  
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 220px;
+  height: 105%;
+	margin: 20px;
+  border-radius: 10px;
+  
+}
+
+.image {
+	width: 220px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	height: 230px;
+	margin: 10px 0px 10px 00px;
+}
+
+.titleArticle {
+	font-weight: 600;
+}
+
+.description {
+	font-weight: 300;
+	font-size: 14px;
+}
+.likedMoviesContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: red;
+  font-size: 15px;
+}
+.popover{
+  border:solid 2px  #16a085;
+  
+}
+.buttonPopover{
+  color: coral;
+}

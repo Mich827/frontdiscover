@@ -1,0 +1,76 @@
+
+.card:hover{
+  box-shadow: 4px 4px 6px black;
+  background-color: rgb(222, 219, 215);
+  /*animation: scale 2s alternate forwards;*/
+}
+/*animation*/
+@keyframes scale {
+  100%{
+    transform: scale(1.1,1.1);
+  }
+  
+}
+.containerMedia{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+  margin: 40px;
+  padding: 20px;
+  position: relative;
+ 
+  
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 250px;
+  height: 100%;
+	margin: 20px;
+  border-radius: 10px;
+  /*box-shadow: 1px 2px 3px black;*/
+  
+  
+}
+
+.image {
+	width: 250px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	height: 230px;
+	margin: 10px 0px 10px 00px;
+}
+
+.titleArticle {
+	font-weight: 600;
+}
+
+.description {
+	font-weight: 300;
+	font-size: 14px;
+}
+.bookmarkIcon{
+  color:rgb(33, 132, 99);
+  font-size: 20px;
+  /*margin-left: 150px;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+.customLink{
+  color:#16a085;
+  
+  text-decoration: none;
+}
+.customLink:hover{
+  
+  text-decoration: underline;
+}
