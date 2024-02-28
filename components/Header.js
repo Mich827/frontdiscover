@@ -40,7 +40,7 @@ export default function Header() {
       return alert("email non conforme");
     }
     console.log(usernameRegister, emailRegister, pwRegister);
-    fetch("http://localhost:3000/users/register", {
+    fetch("https://backend-discover.vercel.app/users/register", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -70,7 +70,7 @@ export default function Header() {
       return alert("champs vides");
     }
     console.log(usernameConnect, pwConnect);
-    fetch("http://localhost:3000/users/connect", {
+    fetch("https://backend-discover.vercel.app/users/connect", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ username: usernameConnect, password: pwConnect }),
