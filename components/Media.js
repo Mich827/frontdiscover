@@ -11,11 +11,9 @@ export default function Media() {
   const dispatch = useDispatch();
 
   const [articlesData, setArticlesData] = useState([]);
-  const API_KEYMedia = "69b3fe5d7e3c4b44b3228f86b163864d";
+  //const API_KEYMedia = "69b3fe5d7e3c4b44b3228f86b163864d";
   useEffect(() => {
-    fetch(
-      `https://newsapi.org/v2/everything?sources=the-verge&apiKey=${API_KEYMedia}`
-    )
+    fetch(`http://localhost:3000/articles`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

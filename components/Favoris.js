@@ -26,8 +26,8 @@ const Favoris = () => {
   return (
     <div>
       <div className={styles.containerMedia}>
-        {bookmarks.map((bookmark) => (
-          <div className={styles.card}>
+        {bookmarks.map((bookmark, i) => (
+          <div className={styles.card} key={i}>
             <img className={styles.image} src={bookmark.urlToImage} />
             <div style={{ display: "flex", justifyContent: "end" }}>
               <button onClick={() => handleRemoveMedia(bookmark)}>

@@ -13,16 +13,14 @@ export default function Movies() {
   console.log(likedMovie);
   const [moviesData, setMoviesData] = useState([]);
   const [likedMovies, setLikedMovies] = useState([]);
-  const API_KEYMovies = "0b0d9b619386a2277ab07b9f85318159";
+  //const API_KEYMovies = "0b0d9b619386a2277ab07b9f85318159";
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEYMovies}`
-    )
+    fetch(`http://localhost:3000/movies`)
       .then((response) => response.json())
       .then((data) => {
-        //console.log(data);
+        console.log(data);
 
-        setMoviesData(data.results);
+        setMoviesData(data.movies);
         //console.log(data.results[0].overview);
       });
   }, []);
@@ -70,8 +68,8 @@ export default function Movies() {
       </Popover>
 
       <div className={styles.containerMedia}>
-        {moviesData.map((movie) => (
-          <div className={styles.card} key={movie.id}>
+        {moviesData.map((movie, i) => (
+          <div className={styles.card} key={i}>
             <img
               className={styles.image}
               src={`https://image.tmdb.org/t/p/w500//${movie.poster_path}`}
