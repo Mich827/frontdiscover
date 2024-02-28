@@ -69,7 +69,7 @@ export default function Header() {
     if (!usernameConnect || !pwConnect) {
       return alert("champs vides");
     }
-    console.log(usernameConnect, pwConnect);
+    
     fetch("https://backend-discover.vercel.app/users/connect", {
       method: "POST",
       headers: { "content-type": "application/json" },
