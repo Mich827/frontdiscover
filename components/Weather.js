@@ -20,7 +20,7 @@ export default function Weather() {
       alert("write city");
     }
     //1
-    fetch(`http://localhost:3000/weather`, {
+    fetch(`https://backend-discover.vercel.app/weather`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export default function Weather() {
       });
   };
   const deleteCity = (cityName) => {
-    fetch(`http://localhost:3000/weather/${cityName}`, {
+    fetch(`https://backend-discover.vercel.app/weather/${cityName}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
