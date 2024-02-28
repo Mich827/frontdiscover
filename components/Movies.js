@@ -13,7 +13,7 @@ export default function Movies() {
   console.log(likedMovie);
   const [moviesData, setMoviesData] = useState([]);
   const [likedMovies, setLikedMovies] = useState([]);
-  //const API_KEYMovies = "0b0d9b619386a2277ab07b9f85318159";
+  
   useEffect(() => {
     fetch(`https://backend-discover.vercel.app/movies`)
       .then((response) => response.json())
