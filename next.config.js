@@ -4,9 +4,9 @@
   images: {
     domains: [],
   },
-};*/
+};
 
-module.exports = nextConfig;
+module.exports = nextConfig;*/
 module.exports = {
   async headers() {
     return [
