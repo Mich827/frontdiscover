@@ -13,7 +13,7 @@ export default function Media() {
   const [articlesData, setArticlesData] = useState([]);
   //const API_KEYMedia = "69b3fe5d7e3c4b44b3228f86b163864d";
   useEffect(() => {
-    fetch(`http://localhost:3000/articles`)
+    fetch(`https://backend-discover.vercel.app/articles`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
