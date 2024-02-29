@@ -6,7 +6,7 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+
 module.exports = {
   async headers() {
     return [
@@ -23,6 +23,7 @@ module.exports = {
     ]
   }
 };
+module.exports = nextConfig;
 
 
 
