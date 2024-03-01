@@ -65,11 +65,11 @@ export default function Header() {
       });
   };
   //fetch for connect
-  const handleConnect = () => {
+  const handleConnect = async () => {
     if (!usernameConnect || !pwConnect) {
       return alert("champs vides");
     }
-    
+    try{
     fetch("https://backend-discover.vercel.app/users/connect", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -88,6 +88,9 @@ export default function Header() {
         setPwConnect("");
         setIsModalVisible(false);
       });
+    } catch(error){
+      console.log(error)
+    
   };
   const handleLogout = () => {
     dispatch(removeUserToStore());
