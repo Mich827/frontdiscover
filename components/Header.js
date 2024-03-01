@@ -65,32 +65,42 @@ export default function Header() {
       });
   };
   //fetch for connect
-  const handleConnect =  () => {
+  const handleConnect = async () => {
     if (!usernameConnect || !pwConnect) {
-      return alert("champs vides");
+        return alert("champs vides");
     }
     
-    fetch("https://backend-discover.vercel.app/users/connect", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ username: usernameConnect, password: pwConnect }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch(
-          addUserToStore({
-            username: usernameConnect,
+    try {
+        const response = await fetch("https://backend-discover.vercel.app/users/connect", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: usernameConnect, password: pwConnect }),
+        });
 
-            token: data.token,
-          })
+        if (!response.ok) {
+            throw new Error("Erreur lors de la requête");
+        }
+
+        const data = await response.json();
+
+        dispatch(
+            addUserToStore({
+                username: usernameConnect,
+                token: data.token,
+            })
         );
+
         setUsernameConnect("");
         setPwConnect("");
         setIsModalVisible(false);
-      });
+    } catch(error) {
+        console.log(error);
+    }
+};
+
 
     
-  };
+  
   const handleLogout = () => {
     dispatch(removeUserToStore());
     dispatch(removeWeatherToStore());
