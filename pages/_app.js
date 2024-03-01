@@ -26,6 +26,11 @@ function App({ Component, pageProps }) {
       <PersistGate persistor={persistor}>
         <Head>
           <title>Discover</title>
+    <meta
+            //ajout des meta desc
+            name="description"
+            content="Discover the latest movies, Discover trending media content, Discover teh trnding weather forecast..."
+          />
         </Head>
         <Header />
         <Component {...pageProps} />
