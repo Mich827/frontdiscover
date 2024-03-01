@@ -37,7 +37,7 @@ export default function Media() {
           <div className={styles.card} key={i}>
             <img className={styles.image} src={article.urlToImage}alt="article Picture" />
             <div style={{ display: "flex", justifyContent: "end" }}>
-              <button id="BookMark"
+              <button /*id="BookMark"*/
                 title="getBookMark" onClick={() => handleBookmarkClick(article)}>
                 <FontAwesomeIcon
                   icon={faBookmark}
