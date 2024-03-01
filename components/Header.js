@@ -179,14 +179,14 @@ export default function Header() {
           onClick={() => handleLogout()}
           style={{
             padding: "10px 15px",
-            backgroundColor: "#16a085",
-            color: "#fff",
+            backgroundColor: "#086b57",
+            
             border: "none",
             borderRadius: "5px",
             cursor: "pointer",
           }}
         >
-          <Link href="/">Logout</Link>
+          <Link href="/"><p style={{ color: "white" }}>Logout</p></Link>
         </button>
       </div>
     );
